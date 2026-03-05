@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nampula - Search Business</title>
+    <link rel="stylesheet" href="nampula.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="btnConversas.css"> <!-- estilos do chat -->
+
+
+</head>
+<body>
+<div class="grade">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="Screenshot__2_-removebg-preview.png" alt="Search Business">
+        </div>
+        <form class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar trabalhos em Nampula...">
+            <button type="submit" id="searchBtn" onclick="pesquisar()">🔍</button>
+        </form>
+        <div id="resultadosBusca"></div>
+        <ul class="nav-menu">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="PROVINCIAS.html">Províncias</a></li>
+            <li><a href="Perfil.html">Perfil</a></li>
+        </ul>
+    </header>
+
+   
+   <!--conteudo 2-->
+   <main class="contenter"> 
+    <section class="cards"> 
+        <div class="card"> 
+            <h2>Instalação Elétrica Simples</h2> 
+            <p>Contratamos para instalação de tomadas e revisão básica de rede elétrica em residência.</p> 
+            <div class="button">
+    <a href="Conversas.html?contato=Electricista_Nampula" class="conversarBtn">
+      <i class="fa-solid fa-comments"></i> Conversar
+    </a>
+  </div> 
+            <!-- Área de conversa --> 
+            <div class="chat-box"> 
+                <div class="chat-messages" id="chatMessages"> 
+                    <p><strong>Cliente:</strong> Olá, qual o valor?</p> 
+                    <p><strong>Profissional:</strong> O serviço custa 500 MT.</p> 
+                </div> 
+                <div class="chat-input"> 
+                    <input type="text" id="chatInput" placeholder="Digite sua mensagem..."> 
+                    <button onclick="enviarMensagem()">Enviar</button> 
+                </div> 
+            </div> 
+        </div>
+        
+    </section>
+     <div class="card2">
+            <div class="card">
+                <h1>💡</h1>
+                <h2>Instalação Elétrica Simples</h2>
+                <p>Contratamos para instalação de tomadas e revisão básica de rede elétrica em residência. Pagamento imediato após conclusão.</p>
+                <div class="button">
+    <a href="Conversas.html?contato=Electricista_Nampula" class="conversarBtn">
+      <i class="fa-solid fa-comments"></i> Conversar
+    </a>
+  </div>
+            </div>
+
+            <div class="card">
+                <h1>🛠️</h1>
+                <h2>Serviços de Pedreiro</h2>
+                <p>Precisa de construção ou pequenas reformas? Profissionais disponíveis em Nampula para trabalhos rápidos e confiáveis.</p>
+                <div class="button">
+    <a href="Conversas.html?contato=Pedreiro_Nampula" class="conversarBtn">
+      <i class="fa-solid fa-comments"></i> Conversar
+    </a>
+  </div>
+            </div>
+
+            <div class="card">
+                <h1>🚖</h1>
+                <h2>Taxista de Moto</h2>
+                <p>Serviço de transporte rápido e acessível em Nampula. Ideal para deslocamentos curtos dentro da cidade.</p>
+                <div class="button">
+    <a href="Conversas.html?contato=Taxista_Nampula" class="conversarBtn">
+      <i class="fa-solid fa-comments"></i> Conversar
+    </a>
+  </div>
+            </div>
+            <div id="cardsContainer"></div>
+    </div> 
+        
+<section class="publicar-vaga">
+  <h2>📢 Divulgue sua vaga em Nampula</h2>
+  <form id="formVaga">
+    <input type="text" name="titulo" placeholder="Título da vaga" required>
+    <textarea name="descricao" placeholder="Descrição detalhada" required></textarea>
+    <input type="text" name="contato" placeholder="Telefone ou Email" required>
+    <select name="categoria" required>
+      <option value="">Selecione a categoria</option>
+      <option value="Pedreiro">Pedreiro</option>
+      <option value="Carpinteiro">Carpinteiro</option>
+      <option value="Eletricista">Eletricista</option>
+      <option value="Motorista">Motorista</option>
+      <option value="Taxista de moto">Taxista de moto</option>
+    </select>
+    <button type="submit">Publicar</button>
+  </form>
+</section>
+</main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        &copy;<span id="ano"></span> - Search Business Nampula
+    </footer>
+</div>
+<script src="Nampula.js"></script>
+<script src="chat.js"></script>
+<!-- BOTÃO FLUTUANTE CONVERSAS -->
+<div id="fab-chat" onclick="window.location.href='Conversas.html'">
+  <i class="fa-solid fa-comments"></i>
+  <span class="fab-badge" id="fabBadge" style="display:none">0</span>
+</div>
+<script src="fab.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Províncias – Search Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="provincias.css">
+    <link rel="stylesheet" href="btnConversas.css"> <!-- estilos do chat -->
+
+
+</head>
+
+<body>
+<div class="grade">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <img src="Screenshot__2_-removebg-preview.png" alt="Search Business"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback" style="display:none">Search Business</span>
+    </div>
+
+    <form class="search-box">
+      <input type="text" id="barraPesquisa" placeholder="Pesquise seu trabalho...">
+      <button type="submit" id="searchBtn" onclick="pesquisar()">🔍</button>
+    </form>
+
+    <div id="resultadosBusca"></div>
+
+    <ul class="nav-menu">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="PROVINCIAS.html" class="active">Províncias</a></li>
+      <li><a href="Perfil.html">Perfil</a></li>
+    </ul>
+
+    <button id="logoutBtn">Sair</button>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <div class="contenter">
+
+    <div class="page-heading">
+      <p><i class="fa-solid fa-location-dot"></i> &nbsp;Explorar por região</p>
+      <h1>Províncias de Moçambique</h1>
+    </div>
+
+    <!-- SELECT PROVÍNCIA -->
+    <div class="Card">
+      <label for="provincia"><i class="fa-solid fa-map"></i> &nbsp;Escolha a Província</label>
+      <select id="provincia" name="provincia" onchange="irParaPagina(this.value)">
+        <option value="">Selecione uma província...</option>
+        <option value="Nampula.html">Nampula</option>
+        <option value="Gaza.html">Gaza</option>
+        <option value="Inhambane.html">Inhambane</option>
+        <option value="Manica.html">Manica</option>
+        <option value="Maputo Província.html">Maputo (Província)</option>
+        <option value="Maputo Cidade.html">Maputo (Cidade)</option>
+        <option value="Cabo Delgado">Cabo Delgado</option>
+        <option value="Niassa">Niassa</option>
+        <option value="Sofala">Sofala</option>
+        <option value="Tete">Tete</option>
+        <option value="Zambézia">Zambézia</option>
+      </select>
+    </div>
+
+    <!-- CARDS DE VAGAS -->
+    <div class="jobs-grid">
+
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar">S</div>
+          <h3>Silvio</h3>
+        </div>
+        <p>Procuro um carpinteiro para montar três portas em minha casa. Pago logo após o trabalho ser finalizado.</p>
+        <div class="button"><a href="#" class="conversarBtn">💬 Conversar</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar">K</div>
+          <h3>Khathya</h3>
+        </div>
+        <p>Procuro um seralheiro para montar grades em minha casa. Pago logo após o trabalho ser finalizado.</p>
+        <div class="button"><a href="#" class="conversarBtn">💬 Conversar</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar">M</div>
+          <h3>Marília</h3>
+        </div>
+        <p>Procuro um eletricista para instalar energia em minha cozinha e quarto. Pago até 1200 MT.</p>
+        <div class="button"><a href="#" class="conversarBtn">💬 Conversar</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar">D</div>
+          <h3>Derick</h3>
+        </div>
+        <p>Procuro 50 pessoas fortes para trabalhos pesados. Bom salário, alimentação incluída. Pagamento diário ou semanal.</p>
+        <div class="button"><a href="#" class="conversarBtn">💬 Conversar</a></div>
+      </div>
+
+    </div>
+  </div><!-- /contenter -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy;<span id="ano"></span> – Search Business – Todos os direitos reservados
+  </footer>
+
+</div><!-- /grade -->
+
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  // provincia.js e chat.js podem ser reativados no projeto real
+</script>
+    <script src="provincia.js"></script>
+    <script src="chat.js"></script>
+    <!-- BOTÃO FLUTUANTE CONVERSAS -->
+<div id="fab-chat" onclick="window.location.href='Conversas.html'">
+  <i class="fa-solid fa-comments"></i>
+  <span class="fab-badge" id="fabBadge" style="display:none">0</span>
+</div>
+<script src="fab.js"></script>
+</body>
+
+</html>

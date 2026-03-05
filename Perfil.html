@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Perfil</title>
+ <link rel="stylesheet" href="Perfil.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="btnConversas.css">
+</head>
+<body class="light">
+  <div class="perfil-container">
+    <h2>Área de Perfil</h2>
+
+    
+    <!--Foto p-->
+  <div class="perfil-foto"> 
+    <img id="fotoPerfil" src="default-avatar.png" alt="Foto de Perfil"> 
+    <input type="file" id="uploadFoto" accept="image/*" style="display:none;"> 
+    <button class="edit-btn" id="uploadBtn">Alterar Foto</button> 
+    <button id="deleteBtn">DELETE❌</button>
+  </div>
+
+   <!--info-->
+    <div class="perfil-info">
+      <p><strong>👤 Nome:</strong> <span id="perfilNome"></span></p>
+      <p><strong>📧 Email:</strong> <span id="perfilEmail"></span></p>
+    </div>
+
+    <!-- Formulário de edição -->
+    <div id="editForm" style="display:none; margin-top:15px;">
+      <input type="text" id="editNome" placeholder="Novo nome">
+      <input type="email" id="editEmail" placeholder="Novo email">
+      <button class="edit-btn" id="saveBtn">Salvar</button>
+    </div>
+
+    <div class="perfil-actions">
+      <button class="edit-btn" id="editBtn">Editar Informações</button>
+      <button class="theme-btn" id="themeBtn">Alternar Tema</button>
+      <button class="logout-btn" id="logoutBtn">Sair</button>
+    </div>
+  </div>
+
+
+   <!-- Seção de atividades -->
+<div class="perfil-atividades">
+  <h3>📝 Minhas Publicações</h3>
+
+  <!-- Upload de nova publicação -->
+  <div class="upload-publicacao">
+    <textarea id="novaPublicacao" placeholder="Escreva algo..."></textarea>
+    <button id="publicarBtn">Publicar</button>
+  </div>
+
+  <!-- Lista de publicações -->
+  <ul id="listaPublicacoes">
+    <!-- Se não houver publicações, aparece esta mensagem -->
+    <li class="sem-publicacoes">Sem publicações</li>
+  </ul>
+</div>
+
+<div class="perfil-atividades">
+  <h3>📝Publicações</h3>
+
+  <!-- Upload de nova publicação -->
+  <div class="upload-publicacao">
+    
+  </div>
+
+  <!-- Lista de publicações -->
+  <ul id="listaPublicacoes">
+    <!-- Se não houver publicações, aparece esta mensagem -->
+    <li class="sem-publicacoes">Sem publicações</li>
+  </ul>
+</div>
+<button class="back-btn" id="backBtn">⬅ Voltar</button>
+<script src="perfil.js"></script>
+<!-- BOTÃO FLUTUANTE CONVERSAS -->
+<div id="fab-chat" onclick="window.location.href='Conversas.html'">
+  <i class="fa-solid fa-comments"></i>
+  <span class="fab-badge" id="fabBadge" style="display:none">0</span>
+</div>
+<script src="fab.js"></script>
+</body>
+</html>

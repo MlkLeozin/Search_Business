@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Boas-vindas</title>
+<link rel="stylesheet" href="entrada.css">
+</head>
+<body>
+  <div class="container">
+    <div id="welcomeMsg" class="welcome"></div>
+    <div class="sub">Ao seu ao nosso Search Business</div>
+    <div class="spinner"></div>
+  </div>
+
+<script>
+  // Recupera usuário logado
+  const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+  if(usuarioLogado){
+    // Mensagem personalizada com efeito typewriter
+    document.getElementById("welcomeMsg").textContent = 
+      "Seja bem-vindo, " + usuarioLogado.nome;
+
+    // Após alguns segundos, redireciona para página principal
+    setTimeout(function(){
+      window.location.href = "inicio.html";
+    }, 6000);
+  } else {
+    // Se não houver login, volta para página de login
+    window.location.href = "log.html";
+  }
+</script>
+</body>
+</html>

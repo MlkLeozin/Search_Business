@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Business</title>
+    <link rel="stylesheet" href="Inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="btnConversas.css"> <!-- estilos do chat -->
+
+
+<body>
+<div class="grade">
+        <header class="header">
+            <div class="logo"><img src="Screenshot__2_-removebg-preview.png" alt="Search Business"></div>
+            <form class="search-box"> <input type="text" id="barraPesquisa" placeholder="Pesquise seu trabalho...">
+                 <button type="submit" id="searchBtn" onclick="pesquisar()" >🔍</button>
+            </form>
+            <div id="resultadosBusca"></div> <!-- fora do header -->
+            <ul class="nav-menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="PROVINCIAS.html">Províncias</a></li>
+                <li><a href="Perfil.html">Perfil</a></li>
+            </ul>
+            <button id="logoutBtn">Sair</button>
+        </header>
+<div class="tudo">
+    <div class="conteiner">
+        <div class="item"> 
+            <h2>Venha em busca de Trabalho</h2>
+            <h3>Na sua província <i class="fa-solid fa-location-dot" id="loc"></i> </h3>
+           
+            <div class="to">
+            <div class="btn">
+                <a href="Divulgar.html">Divulgue seu Trabalho</a>
+            </div>
+            <h1> </h1>
+             <div id="btnBuscar" >
+                <a href="#">🔍  Buscar Trabalho</a>
+             </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h2>Publique seu Trabalho</h2>
+            <p>Dê a descrição do seu negocio podendo ser descrito como um contrato de longo ou curto prazo contratodo profissionais ou gente com experiencia basica. <br>...
+            </p>
+            <div class="button"><a href="Divulgar.html">Publicar</a></div>
+        </div>
+        <div class="card">
+            <h1>💡</h1>
+            <h2>___Instalação Eletrica Simples</h2>
+            <p>Estámos contratando para um mini job : instalação  de tomadas e revisão basica de rede elétrica em residência. Trabalho rapido, pagamento após a conclusão.</p>
+            <div class="button"><a href="Conversas.html?contato=NomeDono" class="conversarBtn">Conversar</a></div>
+        </div>
+        <div class="card">
+            <h1>💡</h1>
+            <h2>___Instalação Eletrica Simples</h2>
+            <p>Estámos contratando para um mini job : instalação  de tomadas e revisão basica de rede elétrica em residência. Trabalho rapido, pagamento após a conclusão.</p>
+            <div class="button"><a href="Conversas.html?contato=NomeDono" class="conversarBtn">Conversar</a></div>
+        </div>
+        <div class="card">
+            <h1>💡</h1>
+            <h2>___Instalação Eletrica Simples</h2>
+            <p>Estámos contratando para um mini job : instalação  de tomadas e revisão basica de rede elétrica em residência. Trabalho rapido, pagamento após a conclusão.</p>
+            <div class="button"><a href="Conversas.html?contato=NomeDono" class="conversarBtn">Conversar</a></div>
+        </div>
+    </div>
+    
+</div>
+        <footer class="footer">
+        <div class="footer-conteiner">
+            <h2>Buscas frequentes</h2>
+            <nav class="footer-links">
+              <a href="#">Pedreiro</a>
+              <a href="#">Carointeiro</a>
+              <a href="#">Eletricidade</a>
+              <a href="#">Taxista de moto</a>
+              <a href="#">Motorista</a>
+              <a href="#">Carregador</a>
+            </nav>
+            <div class="footer-copy">
+                &copy;<span id="ano"></span> - Search Business - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="inicio.js"></script>
+    <script src="chat.js"></script>
+    <!-- BOTÃO FLUTUANTE CONVERSAS -->
+<div id="fab-chat" onclick="window.location.href='Conversas.html'">
+  <i class="fa-solid fa-comments"></i>
+  <span class="fab-badge" id="fabBadge" style="display:none">0</span>
+</div>
+<script src="fab.js"></script>
+</body>
+</html>

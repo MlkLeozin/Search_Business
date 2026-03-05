@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Logout</title>
+<link rel="stylesheet" href="entrada.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logoutMsg">Deslogando...</div>
+    <div class="spinner"></div>
+  </div>
+
+<script>
+  // Mostra animação de logout e depois redireciona
+  setTimeout(function(){
+    window.location.href = "index.html"; // volta para login
+  }, 3000); // metade do tempo da entrada (entrada era 6s, aqui 3s)
+</script>
+</body>
+</html>
